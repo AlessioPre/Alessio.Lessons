@@ -1,0 +1,8 @@
+﻿ namespace Bankupgrade
+
+{
+    interface ISwiftSystem
+    {
+    }
+}
+
