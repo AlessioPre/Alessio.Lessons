@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polimorfismo", "Polimorfism
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bankupgrade", "Bankupgrade\Bankupgrade.csproj", "{12539E41-2830-491A-B635-4DCD57C9DC22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "path", "path\path.csproj", "{8BA6B376-0269-4B35-A04C-2AD296249070}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "path", "path\path.csproj", "{8BA6B376-0269-4B35-A04C-2AD296249070}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimeManagement", "DateTimeManagement\DateTimeManagement.csproj", "{6CE5A09D-CE7A-4659-8848-C37F5286FC5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stockExange", "stockExange\stockExange.csproj", "{0A3FF740-BBBD-4FAB-83E4-6B254650CD34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{8BA6B376-0269-4B35-A04C-2AD296249070}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BA6B376-0269-4B35-A04C-2AD296249070}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BA6B376-0269-4B35-A04C-2AD296249070}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CE5A09D-CE7A-4659-8848-C37F5286FC5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CE5A09D-CE7A-4659-8848-C37F5286FC5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CE5A09D-CE7A-4659-8848-C37F5286FC5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CE5A09D-CE7A-4659-8848-C37F5286FC5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A3FF740-BBBD-4FAB-83E4-6B254650CD34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A3FF740-BBBD-4FAB-83E4-6B254650CD34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A3FF740-BBBD-4FAB-83E4-6B254650CD34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A3FF740-BBBD-4FAB-83E4-6B254650CD34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

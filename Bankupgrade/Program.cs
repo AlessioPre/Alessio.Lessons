@@ -29,6 +29,7 @@ namespace Bankupgrade
 
             // Crea un conto Corrente e deposita dentro un dei soldi 
             SberBank.CreateAccount("Vladimir Putin", "NO DATA");
+            SberBank.CreateAccount("Vladimir Putin", "NO DATA");
             SberBank.DepositFiat(100000, SberBank.Accounts[0].AccountNumber,"Euro"); ;
             SberBank.DepositCrypto(4,"BTC", SberBank.Accounts[0].AccountNumber) ;
             SberBank.InvestInStock(1,"MICROSOFT", SberBank.Accounts[0].AccountNumber);
@@ -45,8 +46,8 @@ namespace Bankupgrade
             // Stampa Saldo iniziale dei due conti  
             Console.WriteLine("-------------------------------------- SALDO INIZIALE -------------------");
 
-          //  Console.WriteLine($" L'account di Vladimir Putin ha un credito di :  {SberBank.account.Balance}");
-          //  Console.WriteLine($" L'account di Bruno Ferreira ha un credito di :  {Unicredit.account.Balance}");
+           //Console.WriteLine($" L'account di Vladimir Putin ha un credito di :  {SberBank.Accounts[0].Balance}");
+           //Console.WriteLine($" L'account di Bruno Ferreira ha un credito di :  {Unicredit.Accounts[0].Balance}");
             Console.WriteLine("-------------------------------------------------------------------------------");
             ;
 
@@ -62,8 +63,8 @@ namespace Bankupgrade
             // Stampa Saldo Fianale dei due conti  
             Console.WriteLine("-------------------------------------- SALDO FINALE -------------------");
 
-          // Console.WriteLine($" L'account di Vladimir Putin ha un credito di :  {SberBank.account.Balance}");
-          //  Console.WriteLine($" L'account di Bruno Ferreira ha un credito di :  {Unicredit.account.Balance}");
+         // Console.WriteLine($" L'account di Vladimir Putin ha un credito di :  {SberBank.Accounts[0].Balance}");
+         // Console.WriteLine($" L'account di Bruno Ferreira ha un credito di :  {Unicredit.Accounts[0].Balance}");
             Console.WriteLine("-------------------------------------------------------------------------------");
 
 

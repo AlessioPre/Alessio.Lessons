@@ -38,11 +38,11 @@ namespace Bankupgrade
         public void CreateAccount(string ClientName, string ClientCF)
         {
             if (Array.Find(_accounts,i => i._client.Cf == ClientCF)==null)
-            //{ 
+            { 
             _account = new Account(ClientName, ClientCF, this);
             //  In un contesto reale avrò un array di Account.
             AddAccountsToArray(_account);
-           //}
+           }
         }
         public void RemoveAccount(long ClientName)
         {
@@ -55,7 +55,7 @@ namespace Bankupgrade
             //this.RemoveAccountToArray(result);
         }
         /// <summary>
-        /// 
+        /// gestione Transfer
         /// </summary>
         /// <param name="to"></param>
         /// <param name="data"></param>
@@ -170,16 +170,20 @@ namespace Bankupgrade
         ///
         public void AddAccountsToArray(Account account)
         {
-
-
+            //if (_counter == 0)
+            //{
+            //    _accounts[_counter] = account;
+            //}
+            //else
+            //{
                 Account[] items = new Account[_counter + 1];
                 Array.Copy(_accounts, items, _accounts.Length);
                 _accounts = items;
                 _accounts[_counter] = account;
                 account.AddAccounts(account._client.ClientId);
                 _counter++;
-            
-              
+
+            //}  
         }
 
         //public void RemoveAccountToArray(Account account)
@@ -243,10 +247,21 @@ namespace Bankupgrade
             //{
             //    //return _interests = (CalcAmount() / 100) * _commertialBank.CentralBank._interestRate;
             //}
-            //decimal CalcAmount()
-            //{
-            //    //return _fiat.AmountInEuro + _crypto.AmountInEuro + _stocks.AmountInEuro;
-            //}
+            decimal CalcAmount()
+            {
+                decimal _fiatTotalAmount = 0;
+                decimal _cryptoTotalAmount = 0 ;
+                decimal _stockTotalAmount = 0;
+                foreach (var item in this._GeneralPorfolio)
+                {
+                    if (item is Fiat)
+                    {
+                        _fiatTotalAmount += item.Amount;
+                    }
+                }
+               return _fiat.Amount+ _crypto.Amount + _stocks.Amount;
+                    
+            }
             public void DepositFIAT(decimal Amount,string kindof)
             {
                 _fiat = new Fiat(kindof, Amount);
@@ -337,15 +352,15 @@ namespace Bankupgrade
                         Account[] items = new Account[_counter + 1];
                         Array.Copy(Accounts, items, Accounts.Length);
                         Accounts = items;
-                        Accounts[_counter] = new Account(this.Name,this.Cf,_account.CommertialBank);
+                        Accounts[_counter] = account;
                         _counter++;
                     }
                 }
-                public void RemoveAccounts()
+                public void RemoveAccounts(Account account)
                 {
                     if (!Array.Exists(Accounts, i => i.AccountNumber == _account.AccountNumber))
                     {
-                        Accounts[Accounts.Length] = _account;
+                        Accounts[Accounts.Length] = account;
                     }
                 }
             }
@@ -378,8 +393,6 @@ namespace Bankupgrade
                 public Fiat(string name,decimal Amount) : base(name,Amount)
                 {
                 }
-               
-
             }
             public class Crypto : Asset
             {

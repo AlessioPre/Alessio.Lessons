@@ -63,6 +63,11 @@ namespace Bankupgrade
             _commercialBank = new CommertialBank[0];
             count= 0;
         }
+        public CentralBank(string name, string Country) : base(name, Country)
+        {
+            _commercialBank = new CommertialBank[0];
+            count = 0;
+        }
     }
 
 }
