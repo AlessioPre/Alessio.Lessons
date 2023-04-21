@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Runtime.InteropServices;
 
 namespace stockExange
@@ -8,9 +9,10 @@ namespace stockExange
         static void Main(string[] args)
         {
             CommercialBank  commercialBank = new CommercialBank();
-            StockMarket intermediary = new StockMarket();
-            commercialBank.Buy("stock", 12,intermediary);
+            StockMarket stockMarket = new StockMarket();
+            commercialBank.BuyStock(stockMarket, 12);
             //commercialBank.Buy("crypto",3,intermediary);
+        
         }     
     }
 }

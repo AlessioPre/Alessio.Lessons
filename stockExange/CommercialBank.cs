@@ -12,14 +12,14 @@ namespace stockExange
 
         public CommercialBank()
         {
-            FinancialIntermediary = new StockMarket();
+      
         }
 
-        public void BuyStock(string name ,int amount)
+        public void BuyStock(StockMarket name ,int amount)
         {
-            base.Buy(name,amount,FinancialIntermediary);
+            base.Buy(amount,name);
         }
 
-
+       
     }
 }

@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace CryptoExangeInterface
 {
-    internal class CryptoExange
+    internal class CryptoExange : CryptoIntermediary
     {
+        public CryptoExange()
+        {
+        }
     }
 
     class Crypto:Asset

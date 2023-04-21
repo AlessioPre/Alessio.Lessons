@@ -14,11 +14,11 @@ namespace stockExange
             _name = name.ToLower();
         }
 
-        public override Asset Buy(string type, int amount, FinancialIntermediary interme)
+        protected override Asset Buy(int amount, FinancialIntermediary interme)
         {
             StockIntermediary stockMarket = (StockIntermediary)interme;
             StockMarket stockMarkets = (StockMarket)stockMarket; 
-            return  (interme).Buy(type, amount, interme);
+            return stockMarkets.Buy(amount, stockMarket);
         }
     }
 }

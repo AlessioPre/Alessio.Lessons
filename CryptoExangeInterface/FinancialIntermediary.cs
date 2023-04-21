@@ -9,7 +9,7 @@ namespace CryptoExangeInterface
 {
     internal abstract class FinancialIntermediary : IFinancial
     {
-        public virtual FinancialIntermediary Buy(IFinancial type)
+        protected virtual FinancialIntermediary Buy(IFinancial type)
         {
             if (type is IStock)
             {
@@ -24,5 +24,15 @@ namespace CryptoExangeInterface
                 return null; 
             }
         }
+
+
+        FinancialIntermediary IFinancial.Buy(CryptoExangeInterface.IFinancial type) 
+        {
+            
+
+            return this.Buy(type);
+        }
+
+       
     }
 }

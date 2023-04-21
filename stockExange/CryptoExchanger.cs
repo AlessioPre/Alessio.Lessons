@@ -9,26 +9,18 @@ namespace stockExange
 {
     internal class CryptoExchanger:CryptoIntermediary
     {
-
-
-
         public CryptoExchanger()
         {
             
         }
-
-
-
-        public override Asset Buy(string type, int amount, FinancialIntermediary interme)
+        protected override Asset Buy(int amount, FinancialIntermediary interme)
         {
-            return new Crypto(type, amount);
+            return new Crypto(amount);
         }
-
         public class Crypto : Asset
         {
-            public Crypto(string type , int amount):base()
+            public Crypto( int amount):base()
             {
-
             }
         }
     }

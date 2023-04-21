@@ -8,18 +8,18 @@ namespace stockExange
 {
     internal abstract class FinancialIntermediary
     {
-        public virtual Asset Buy(string type,int amount,FinancialIntermediary interme) 
+        protected virtual Asset Buy(int amount,FinancialIntermediary type) 
         {
 
-            if (type == "stock")
+            if (type is StockMarket)
             {
-                StockIntermediary intermediary = (StockIntermediary)interme;
-                return interme.Buy(type,amount,interme); 
+                StockIntermediary intermediary = (StockIntermediary)type;
+                return type.Buy(amount,type); 
             }
             else
             {
-                CryptoIntermediary intermediary = (CryptoIntermediary)interme;
-                return interme.Buy(type,amount,interme);
+                CryptoIntermediary intermediary = (CryptoIntermediary)type;
+                return type.Buy(amount,type);
             }
         }
 

@@ -6,18 +6,15 @@ using System.Threading.Tasks;
 
 namespace stockExange
 {
-    public class CryptoIntermediary : FinancialIntermediary
+    internal class CryptoIntermediary : FinancialIntermediary
     {
         public CryptoIntermediary()
         {
         }
-
-        public override Asset Buy(string type, int amount, FinancialIntermediary interme)
+        protected override Asset Buy(int amount, FinancialIntermediary interme)
         {
             CryptoExchanger cryptoExchanger = (CryptoExchanger)interme;
-            return (interme).Buy(type, amount, interme);
+            return cryptoExchanger.Buy(amount, interme);
         }
-
-       
     }
 }

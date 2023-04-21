@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "path", "path\path.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimeManagement", "DateTimeManagement\DateTimeManagement.csproj", "{6CE5A09D-CE7A-4659-8848-C37F5286FC5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stockExange", "stockExange\stockExange.csproj", "{0A3FF740-BBBD-4FAB-83E4-6B254650CD34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "stockExange", "stockExange\stockExange.csproj", "{0A3FF740-BBBD-4FAB-83E4-6B254650CD34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoExangeInterface", "CryptoExangeInterface\CryptoExangeInterface.csproj", "{41AEB12A-F294-448A-953D-88ABD8CE45F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{0A3FF740-BBBD-4FAB-83E4-6B254650CD34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A3FF740-BBBD-4FAB-83E4-6B254650CD34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A3FF740-BBBD-4FAB-83E4-6B254650CD34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41AEB12A-F294-448A-953D-88ABD8CE45F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41AEB12A-F294-448A-953D-88ABD8CE45F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41AEB12A-F294-448A-953D-88ABD8CE45F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41AEB12A-F294-448A-953D-88ABD8CE45F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
